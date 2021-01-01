@@ -1,0 +1,134 @@
+#MobEnhancer Config
+#Set the Health of each Mob Below
+#1 is equal to half a heart so a Player has 20 health
+#To not modify the health of a specifc Mob you may set it's value to -1
+
+
+#Hostile
+ZOMBIE: 20
+SKELETON: 20
+CREEPER: 20
+SPIDER: 16
+WITCH: 26
+CAVE_SPIDER: 12
+SILVERFISH: 8
+GHAST: 10
+BLAZE: 20
+
+
+#Passive
+COW: 10
+PIG: 10
+SHEEP: 8
+BAT: 6
+CHICKEN: 4
+MUSHROOM_COW: 10
+OCELOT: 10
+SQUID: 10
+VILLAGER: 20
+
+
+#Neutral
+PIG_ZOMBIE: 20
+ENDERMAN: 40
+WOLF: 8
+
+
+#Utility
+IRON_GOLEM: 100
+SNOWMAN: 6
+
+
+#Bosses
+ENDER_DRAGON: 200
+WITHER: 300
+GIANT: 50
+
+
+
+### MOB ARMOR ###
+GiveArmorToMobs: true
+
+Zombie:
+  holding:
+    ==: org.bukkit.inventory.ItemStack
+    type: DIAMOND_SWORD
+  helmet:
+    ==: org.bukkit.inventory.ItemStack
+    type: SKULL_ITEM
+    damage: 4
+  chestplate:
+    ==: org.bukkit.inventory.ItemStack
+    type: CHAINMAIL_CHESTPLATE
+  leggings:
+    ==: org.bukkit.inventory.ItemStack
+    type: CHAINMAIL_LEGGINGS
+  boots:
+    ==: org.bukkit.inventory.ItemStack
+    type: CHAINMAIL_BOOTS
+
+
+Skeleton:
+  holding:
+    ==: org.bukkit.inventory.ItemStack
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        ARROW_FIRE: 1
+  helmet:
+    ==: org.bukkit.inventory.ItemStack
+    type: AIR
+  chestplate:
+    ==: org.bukkit.inventory.ItemStack
+    type: LEATHER_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: LEATHER_ARMOR
+      color:
+        ==: Color
+        RED: 127
+        BLUE: 102
+        GREEN: 51
+  leggings:
+    ==: org.bukkit.inventory.ItemStack
+    type: LEATHER_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: LEATHER_ARMOR
+      color:
+        ==: Color
+        RED: 102
+        BLUE: 51
+        GREEN: 127
+  boots:
+    ==: org.bukkit.inventory.ItemStack
+    type: LEATHER_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: LEATHER_ARMOR
+      color:
+        ==: Color
+        RED: 51
+        BLUE: 127
+        GREEN: 102
+
+
+SampleItem:
+  ==: org.bukkit.inventory.ItemStack
+  type: DIAMOND_SWORD
+  damage: 500
+  amount: 1
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: §6Sample Item
+    lore:
+    - First line of lore
+    - Second line of lore
+    - §1Color §2support
+    enchants:
+      DAMAGE_ALL: 2
+      KNOCKBACK: 7
+      FIRE_ASPECT: 1

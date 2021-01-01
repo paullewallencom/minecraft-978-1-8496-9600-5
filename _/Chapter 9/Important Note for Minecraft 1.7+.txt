@@ -1,0 +1,9 @@
+	This book and code are written in a way that they will not become easily outdated as new Minecraft versions are released. Though this text had been published in 2013, it is still relevant and valid through the latest version of Minecraft.
+
+	However, in version 1.7 of the game, Mojang decided to begin using UUIDs rather than a Player's name to identify the player. This is something to keep in mind as you work on the 'Warper' plugin. The code as it is will function correctly, but may give unwanted results if a Player changes their username.
+
+	For example, if a Player with the username Steve creates a home warp location, the plugin saves the data under the username 'Steve'. Now let's say that same Player changes their username to Bob. The Player will need to recreate their home warp location because we saved the data under the username 'Steve' and we think that 'Bob' is a completely new Player.
+
+	One simple solution to this is to store the Player's UUID within our HashMap rather than the Player's name. There are several articles on the change to UUIDs if you are interested in knowing more. If you are having trouble figuring out if you are properly using UUIDs within the Warper plugin, feel free to contact me with any questions.
+
+- Cody (Codisimus) Sommer
